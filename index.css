@@ -1,0 +1,104 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+  
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+}
+
+
+#title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+main {
+    margin: 20px;
+}
+
+.screen {
+    height: 300px;
+    overflow: auto;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+}
+  
+.eu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.voce {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.usuario {
+    font-size: 14px;
+    color: #aaa;
+    margin: 5px 0 2px 0;
+}
+
+.msg {
+    font-size: 16px;
+    background-color: rgb(248, 248, 248);
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 0 0 8px 0;
+}
+
+.mandar {
+    display: flex;
+    margin-top: 20px;
+}
+
+.mandar input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+    background-color: rgb(248, 248, 248);
+}
+
+.mandar button {
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mandar button:hover {
+    background-color: #555;
+}
+
+    

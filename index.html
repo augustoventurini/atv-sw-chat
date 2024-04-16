@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atendimento on-line</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <section id="title">
+                <p>Atendimento on-line</p>
+            </section>
+        </header>
+        <main>
+            <section class="screen">
+                <div class="voce">
+                    <div class="usuario">Atendente diz:</div>
+                    <div class="msg">Blabla blabla blabla</div> 
+                    <div class="usuario">Atendente diz:</div>
+                    <div class="msg">Blabla blabla blabla</div> 
+                </div>
+                <div class="eu">
+                    <div class="usuario">Você diz:</div>
+                    <div class="msg">Blabla blabla blabla</div>  
+                    <div class="usuario">Você diz:</div>
+                    <div class="msg">Blabla blabla blabla</div>  
+                </div>
+            </section>
+            <section id="mandar" class="mandar">
+                <input  type='text' id="mensagem" placeholder="Digite sua mensagem...">
+                <button id='enviar'type="button" onclick="botaoclick()">Enviar</button>
+            </section>
+        </main> 
+        <script>
+            function botaoclick() {
+                let mensagem = document.getElementById('mensagem').value;
+
+                mandarmsg(mensagem);
+
+                if (mensagem == '') return;
+
+                document.getElementById('mensagem').value = '';
+            }
+
+            function mandarmsg(mensagem) {
+                let message = `<div class = "eu">
+                                    <div class = "usuario">Você diz:</div>
+                                    ${mensagem == ''
+                                        ? alert('Você não digitou uma mensagem')
+                                        : `<div class = "msg">${mensagem}</div>`}
+                                </div>`;
+                $('.screen').append(message);
+            }
+        </script>
+    </body>
+</html>
